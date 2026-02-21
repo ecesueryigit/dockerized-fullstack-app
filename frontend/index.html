@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DevOps Project</title>
+</head>
+<body>
+  <h1>My DevOps Project</h1>
+
+  <button onclick="getMessage()">Get Backend Message</button>
+
+  <p id="message"></p>
+  
+  <script>
+    async function getMessage() {
+      const response = await fetch("http://localhost:5000/api/message");
+      const data = await response.json();
+      document.getElementById("message").innerText = data.message;
+    }
+  </script>
+
+  </body>
+  </html>
