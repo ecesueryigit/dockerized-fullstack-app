@@ -18,3 +18,5 @@ services:
       - ./frontend:/app
     environment:
       - NODE_ENV=development
+    depends_on:
+      - backend
